@@ -2,7 +2,7 @@
 
 ## Background
 
-Finding new books to read isn’t always easy. Looking at the size of libraries and some bookstores, it’s hardly surprising that there’s a lot of bad stuff circulating as well. Until recently, we limited ourselves to word of mouth and the tedious business of reading the back of every book on the shelves. How old-fashioned.
+Finding new books to read isn’t always easy. Looking at the size of libraries and some bookstores, it’s hardly surprising that there’s a lot of bad stuff circulating as well. Until recently, we limited ourselves to word of mouth and the tedious business of reading the back of every book on the shelves.
 
 With the help of statistical techniques and large scale data processing we plan to build a book recommendation engine, that aims to serve to all book-lovers alike. No need to register or sign-up. Just enter the name of the book/author you have last read, and we shall provide you with 'quick' recommendations that will help you select your next favourite book.
 
@@ -28,7 +28,14 @@ The user is expected to know how to browse the web. The recommendation engine wi
 
 ## Use cases
 
-- Describing at least two use cases. 
-- For each, describe:
-- the objective of the user interaction (e.g., withdraw money from an ATM)
-- the expected interactions between the user and your system.
+- Use case - 1
+Receive recommendations based on a book/author input by the user
+The user types in a book name or author that they have previously read, the system generates appropriate recommendations using the machine learning model.
+
+- Use case - 2 
+Receive recommendations based on previous history.
+The user selects a list of books/authors/genres that they like from the UI, and the system generates the appropriate recommendations using the machine learning model
+
+- Use case - 3
+Users can view more information about the book they are interested in.
+The user can click on a book of their liking on the UI and the system provides relevant information such as genre, short summary, ratings and author.
