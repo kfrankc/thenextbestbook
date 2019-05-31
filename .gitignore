@@ -1,4 +1,5 @@
 .DS_Store
+/UI/node_modules
 etl/merged_file.json
 etl/derby.log
 etl/spark-warehouse
