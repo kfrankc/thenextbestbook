@@ -5,4 +5,5 @@ etl/derby.log
 etl/spark-warehouse
 etl/booksWithTitle.json
 etl/metastore_db
-
+.idea
+__pycache__
