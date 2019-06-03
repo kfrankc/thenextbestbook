@@ -26,10 +26,14 @@
 }
 
 .modal-90w {
-  height:60% !important;
-  max-width: none!important;
   
+  max-width: 150vh !important;
 }
+
+.modal-next {
+  max-width: 97vh !important;
+}
+
 
 @keyframes App-logo-spin {
   from {
