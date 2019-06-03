@@ -32,8 +32,8 @@ The user selects a book title that they are interested in on the application fro
 ## Preliminary plan
 
 - [X] Request product metadata access from Amazon and obtain data from Goodreads 
-- [ ] Combine Amazon ratings data with Goodreads based on the book title 
-- [ ] Generate users vs books matrix for colloborative filtering (rows - users, columns - books, values - ratings)
-- [ ] Build, train and test the colloborative filtering model 
+- [X] Combine Amazon ratings data with Goodreads based on the book title 
+- [X] Generate users vs books matrix for matrix factorization(rows - users, columns - books, values - ratings)
+- [X] Build, train and test the matrix factorization model 
 - [ ] Expose the model in the form of RESTful API's. (input - book title/author, user ; output - list of book recommendations)
 - [ ] Build an intuitive UI to serve the recommendations
