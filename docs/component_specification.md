@@ -9,7 +9,7 @@ Transform - join the datasets based on the book title and append amazon ratings 
 Load - Generate a users vs books matrix and store it as a csv file or in a database.
 
 - Recommendation Engine
-A collaborative filtering model is designed to provide user-item and item-item recommendations. The model takes in the users vs books matrix as input and generates a list of recommended books as the output. 
+A matrix factorization model (SVD) is designed to provide user-item recommendations. The model takes in the users vs books -utility matrix as input and generates a list of recommended books as the output. 
 
 - Application Back-end
 Exposes the model and the books database in the form of RESTful API's for interaction with the outside world. The inputs to the API include queries such as the book title, author, genre, and userId. The API's output information with regards to a particular book and also outputs a list of recommendations to the user.
