@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom'
 import MainApp from './MainApp'
 import AppOne from './AppOne'
 import AppTwo from './AppTwo'
+import AppThree from './AppThree'
 class App extends React.Component{
 render() {
     return (
@@ -10,6 +11,7 @@ render() {
         <Route path="/" exact component ={MainApp} />
         <Route path="/recommendations" component={AppOne} />
         <Route path="/virtualLib" component={AppTwo} />
+        <Route path="/retUser" component={AppThree} />
         </div>
     );
   }
