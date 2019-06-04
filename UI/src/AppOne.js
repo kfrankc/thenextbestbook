@@ -43,6 +43,8 @@ class AppOne extends React.Component{
     this.handleMouseClick = this.handleMouseClick.bind(this);
 
     this.state = {
+      selected: {},
+      recLoading: false,
       show: false,
       text: "",
       title:"",
@@ -74,10 +76,11 @@ class AppOne extends React.Component{
 
   handleSubmit(event){
     console.log(this.state.selected)
+    this.setState({recLoading: true})
     fetch(`http://localhost:8080/books/similarbooks/${this.state.selected.book_id}`)
         .then((response) => {
             response.json().then((data) => {
-                this.setState({tileData: data})
+                this.setState({tileData: data,recLoading: false})
                 this.handleShow()
               })
           });
@@ -127,6 +130,8 @@ class AppOne extends React.Component{
           <Form.Label style={{color:"black",fontFamily:"Luminari",fontSize:"21pt"}}>The Last Book I enjoyed was,</Form.Label>
 
             <Typeahead
+                placeholder="Book Name"
+                inputProps={{ placeholder: 'Book Name' }}
                 labelKey="title_author"
                 isLoading={this.state.isLoading}
                 onChange={selected=>{
@@ -155,10 +160,16 @@ class AppOne extends React.Component{
         </Form.Group>
 
         <Form.Group controlId="formBasicAuthor">
-          <Form.Control type="text" placeholder="Author Name" />
+          <Form.Control type="text"
+                        value={this.state.selected? this.state.selected.name : ""}
+                        placeholder="Author Name" />
         </Form.Group>
 
-        <Button variant="success" style={{marginTop:"100px",fontSize:"20pt",fontFamily:"Luminari"}} onClick={e => this.handleSubmit(e)}>Get my next book!</Button>
+        <Button
+            disabled={this.state.recLoading}
+            variant="success" style={{marginTop:"100px",fontSize:"20pt",fontFamily:"Luminari"}}
+                onClick={e => this.handleSubmit(e)}>
+            {this.state.recLoading?"Fetching recommendations..":"Get my next book!"}</Button>
       </div>
     </Form>
     </div>
@@ -179,6 +190,7 @@ class AppOne extends React.Component{
                  style={{backgroundColor:"rgba(0,0,0,1)",
                      display:"block"}}>
             <img onMouseEnter={this.handleMouseEnter}
+
                  onMouseUp={() => this.handleMouseClick(tile)}
                  onMouseLeave={this.handleMouseLeave}
                  src={tile.image_url} style={{width:"200px",height:"250px",float:"left",opacity:'0.85'}} alt={tile.title} />
