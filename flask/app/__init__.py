@@ -1,4 +1,5 @@
 from flask import Flask,g
+from flask_cors import CORS
 from pymongo import MongoClient
 
 
@@ -15,6 +16,7 @@ def get_db():
 
 def create_app():
     app = Flask(__name__,static_url_path='')
+    CORS(app)
     app.debug = True
     from app.controllers.books import mod
     app.register_blueprint(mod)
