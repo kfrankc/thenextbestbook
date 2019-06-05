@@ -13,7 +13,6 @@ def client():
     yield client
 
 
-
 def test_config():
    """Test create_app without passing test config."""
    assert not create_app(None).testing
