@@ -14,16 +14,19 @@ def get_db():
         g.db = client.test
     return g.db
 
-def create_app():
+def create_app(config):
     app = Flask(__name__,static_url_path='')
     CORS(app)
     app.debug = True
     from app.controllers.books import mod
     app.register_blueprint(mod)
 
-    client = MongoClient("mongodb://127.0.0.1:27017/")
-    db = client.test
-    print(db.books.find_one({}))
+    @app.route('/hello')
+    def hello_world():
+        return 'Hello World!'
+
+    app.add_url_rule('/', endpoint='index')
+
     return app
 #db = Connection()
 

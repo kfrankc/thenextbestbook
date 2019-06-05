@@ -21,8 +21,8 @@ def get_book_titles(bookname):
 	db = get_db()
 	books = db.books.find({"$text": {"$search": "\""+bookname+"\""}, "similar_books":
 		{"$exists": True, "$not": {"$size": 0}}},
-				  {"title": 1,"book_id":1,"name":1,"_id":False}).limit(10)
-	regx = re.compile('/.*siddhar.*/', re.IGNORECASE)
+				  {"title": 1,"book_id":1,"name":1,"_id":False}).limit(30)
+
 	books2 = []
 	if books.count() == 0:
 		books2 = db.books.find({"title": {"$regex": ".*"+bookname+".*",'$options' : 'i'}},
@@ -33,11 +33,10 @@ def get_book_titles(bookname):
 		search_results.append(document)
 	if books.count != 0:
 		for document in books2:
-			print("iterating through books", document["title"])
+
 			document["title_author"] = document["title"] + " - " + document["name"]
 			search_results.append(document)
-	print("before search_results")
-	print(dumps(search_results))
+
 	return dumps(search_results)
 
 
@@ -55,5 +54,5 @@ def get_book_recommendations(bookid):
 	results =[]
 	for rec in recommendations:
 		results.append(rec)
-	print(results)
+
 	return dumps(results)

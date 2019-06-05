@@ -4,6 +4,7 @@ import MainApp from './MainApp'
 import AppOne from './AppOne'
 import AppTwo from './AppTwo'
 import AppThree from './AppThree'
+import AppFour from './AppFour'
 class App extends React.Component{
 render() {
     return (
@@ -12,6 +13,7 @@ render() {
         <Route path="/recommendations" component={AppOne} />
         <Route path="/virtualLib" component={AppTwo} />
         <Route path="/retUser" component={AppThree} />
+        <Route path="/retUser2" component={AppFour} />
         </div>
     );
   }
