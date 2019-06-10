@@ -9,7 +9,7 @@ Transform - join the datasets based on the book title and append amazon ratings 
 Load - Generate a users vs books matrix and store it as a csv file or in a database.
 
 - Recommendation Engine
-A collaborative filtering model is designed to provide user-item and item-item recommendations. The model takes in the users vs books matrix as input and generates a list of recommended books as the output. 
+A matrix factorization model (SVD) is designed to provide user-item recommendations. The model takes in the users vs books -utility matrix as input and generates a list of recommended books as the output. 
 
 - Application Back-end
 Exposes the model and the books database in the form of RESTful API's for interaction with the outside world. The inputs to the API include queries such as the book title, author, genre, and userId. The API's output information with regards to a particular book and also outputs a list of recommendations to the user.
@@ -32,8 +32,8 @@ The user selects a book title that they are interested in on the application fro
 ## Preliminary plan
 
 - [X] Request product metadata access from Amazon and obtain data from Goodreads 
-- [ ] Combine Amazon ratings data with Goodreads based on the book title 
-- [ ] Generate users vs books matrix for colloborative filtering (rows - users, columns - books, values - ratings)
-- [ ] Build, train and test the colloborative filtering model 
+- [X] Combine Amazon ratings data with Goodreads based on the book title 
+- [X] Generate users vs books matrix for matrix factorization(rows - users, columns - books, values - ratings)
+- [X] Build, train and test the matrix factorization model 
 - [ ] Expose the model in the form of RESTful API's. (input - book title/author, user ; output - list of book recommendations)
 - [ ] Build an intuitive UI to serve the recommendations

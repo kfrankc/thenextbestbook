@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 100vh;
+  height: 100vh;
 }
 
 .App-logo {
@@ -24,10 +26,14 @@
 }
 
 .modal-90w {
-  height:60% !important;
-  max-width: none!important;
   
+  max-width: 150vh !important;
 }
+
+.modal-next {
+  max-width: 97vh !important;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -36,4 +42,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+img {
+  cursor: pointer;
 }
