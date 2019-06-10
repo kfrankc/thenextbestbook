@@ -1,17 +1,21 @@
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SparkSession
 
-conf = SparkConf().setMaster("local").setAppName("temp")
-spark = SparkSession.builder.appName("Python Spark SQL basic example").getOrCreate()
-books = spark.read.option('compression', 'gzip').json("/Users/frankchen/Desktop/reviews_Books_5.json.gz")
 
-metadata = spark.read.option('compression', 'gzip').json("/Users/frankchen/Desktop/metadata.json.gz")
+class ETL_Amazon():
+    # Initialize ETL_Amazon Object
+    def __init__(self):
+        self.spark = SparkSession.builder.appName(
+            "Python Spark SQL basic example").getOrCreate()
 
-books.createGlobalTempView("books")
-metadata.createGlobalTempView("metadata")
+    # read JSON function
+    # input: file location string
+    # return: spark object containing content of file
+    def readJSON(self, file):
+        return self.spark.read.option('compression', 'gzip').json(file)
 
-booksWithTitle = spark.sql("SELECT b.asin, b.overall, m.title FROM global_temp.books b, global_temp.metadata m"
-          " where b.asin = m.asin")
-
-# booksWithTitle.coalesce(1).write.format('json').save("./booksWithTitle.json")
-booksWithTitle.write.format('json').save("./booksWithTitle.json")
+    # sql_query function
+    # input: sql command
+    # return: spark object containing content of SQL command response
+    def sql_query(self, sql_cmd):
+        return self.spark.sql(sql_cmd)

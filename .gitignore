@@ -5,5 +5,7 @@ etl/derby.log
 etl/spark-warehouse
 etl/booksWithTitle.json
 etl/metastore_db
+etl/booksWithTitle.csv
+etl/merged_file.csv
 .idea
 __pycache__
