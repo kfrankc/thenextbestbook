@@ -10,6 +10,11 @@ from surprise.model_selection import train_test_split
 
 class RecommendationEngine:
     """
+    Args:
+            self.data: Input dataset with user ID,book ID and ratings
+            self.model = trained recommendation model
+            self.user_predictions(list of Prediction objects): The list of predictions, as
+                returned by the test method of an algorithm.
 
     """
 
@@ -20,6 +25,7 @@ class RecommendationEngine:
     MODEL_FILENAME = 'pickle_model.pkl'
 
     def __init__(self):
+
         self.clazz = RecommendationEngine
         self.data = self.get_data()
         self.train_set, self.test_set = self.split_data()
@@ -72,9 +78,7 @@ class RecommendationEngine:
     def get_top_n(self, n=10):
         """Return the top-N recommendation for each user from a set of predictions.
 
-        Args:
-            user_predictions(list of Prediction objects): The list of predictions, as
-                returned by the test method of an algorithm.
+
             n(int): The number of recommendation to output for each user. Default
                 is 10.
 
