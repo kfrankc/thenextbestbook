@@ -1,12 +1,10 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button'
 import './App.css';
-import AppOne from './AppOne'
-import AppTwo from './AppTwo'
 import {Link,Route} from 'react-router-dom'
 
 
-class MainApp extends React.Component{
+class WelcomePage extends React.Component{
   
   constructor(props, context) {
     super(props, context);
@@ -38,7 +36,7 @@ class MainApp extends React.Component{
   render(){
 
   return (
-  <div className="App" style={{marginTop:'0',height:'100vh',verticalAlign:'middle',backgroundImage:'url(books.jpg)',backgroundSize:"cover",width:"100%"}}>
+  <div className="App" style={{marginTop:'0',height:'100vh',verticalAlign:'middle',backgroundImage:'url(images/books.jpg)',backgroundSize:"cover",width:"100%"}}>
     <link rel="stylesheet" 
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
@@ -60,4 +58,4 @@ class MainApp extends React.Component{
     </div>);}
 }
 
-export default MainApp;
+export default WelcomePage;
