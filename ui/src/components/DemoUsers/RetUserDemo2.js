@@ -5,7 +5,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import ReactStars from 'react-stars'
-import './App.css';
+import '../App.css';
 import {FaExternalLinkAlt} from 'react-icons/fa';
 
 
@@ -324,19 +324,19 @@ class RetUserDemo2 extends React.Component{
   render(){
     const classes = useStyles();
   return (
-  <div className="App" style={{marginTop:'0',height:'100vh',verticalAlign:'middle',backgroundImage:'url(books.jpg)',backgroundSize:"cover",width:"100%"}}>
+  <div className="App" style={{marginTop:'0',height:'100vh',verticalAlign:'middle',backgroundImage:'url(./images/books.jpg)',backgroundSize:"cover",width:"100%"}}>
     <link rel="stylesheet" 
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
     crossorigin="anonymous"/>
-    <div style={{marginTop:'10vh',paddingTop:'2%',paddingBottom:'2%',paddingLeft:"4%",paddingRight:'4%',marginLeft:'10vh', width:'160vh',height:'80vh',backgroundColor:'rgba(0,0,0,0.8)',position:'fixed',textAlign:'left'}}>
+    <div style={{marginTop:'10vh',paddingTop:'2%',paddingBottom:'2%',paddingLeft:"7%",paddingRight:'4%',marginLeft:'10vh', width:'160vh',height:'80vh',backgroundColor:'rgba(0,0,0,0.8)',position:'fixed',textAlign:'left'}}>
         <div style={{color:'white',fontSize:'18pt',fontFamily:"Luminari"}}>
            Rated Books <br />
         </div>
-        <div class={classes.root} style={{height:'250px',overflowX:'auto'}}>
+        <div class={classes.root} style={{height:'27vh',overflowX:'auto'}}>
         <GridList className={classes.gridList} cols={2.5} style={{marginLeft:"2%",marginBottom:"2%"}}>
         {this.state.options.map(tile => (
-          <GridListTile style={{width:"200px",height:"250px",marginRight:"5%",marginBottom:"4%"}}
+          <GridListTile style={{width:"20vh",height:"27vh",marginRight:"5%",marginBottom:"4%"}}
                         className={classes.gridTile}
                         key={tile.img}>
             <div className="image-container"
@@ -345,7 +345,7 @@ class RetUserDemo2 extends React.Component{
             <img onMouseEnter={this.handleMouseEnter}
                  onMouseUp={() => this.handleMouseClick(tile)}
                  onMouseLeave={this.handleMouseLeave}
-                 src={tile.image_url} style={{width:"200px",height:"250px",float:"left",opacity:'0.85'}} alt={tile.title} />
+                 src={tile.image_url} style={{width:"20vh",height:"27vh",float:"left",opacity:'0.85'}} alt={tile.title} />
                  <GridListTileBar
                             classes={{
                                 marginLeft: 5,
@@ -368,10 +368,10 @@ class RetUserDemo2 extends React.Component{
         <div style={{color:'white',fontSize:'18pt',paddingTop:'2%',fontFamily:"Luminari"}}>
            Recommended Books <br />
         </div>
-        <div class={classes.root} style={{height:'250px',overflowX:'auto'}}>
+        <div class={classes.root} style={{height:'27vh',overflowX:'auto'}}>
         <GridList className={classes.gridList} cols={2.5} style={{marginLeft:"2%",marginBottom:"2%"}}>
         {this.state.tileData.map(tile => (
-          <GridListTile style={{width:"200px",height:"250px",marginRight:"5%",marginBottom:"4%"}}
+          <GridListTile style={{width:"20vh",height:"27vh",marginRight:"5%",marginBottom:"4%"}}
                         className={classes.gridTile}
                         key={tile.img}>
             <div className="image-container"
@@ -380,7 +380,7 @@ class RetUserDemo2 extends React.Component{
             <img onMouseEnter={this.handleMouseEnter}
                  onMouseUp={() => this.handleMouseClick(tile)}
                  onMouseLeave={this.handleMouseLeave}
-                 src={tile.image_url} style={{width:"200px",height:"250px",float:"left",opacity:'0.85'}} alt={tile.title} />
+                 src={tile.image_url} style={{width:"20vh",height:"27vh",float:"left",opacity:'0.85'}} alt={tile.title} />
                  <GridListTileBar
                             classes={{
                                 marginLeft: 5,
