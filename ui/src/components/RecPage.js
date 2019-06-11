@@ -9,9 +9,9 @@ import ReactStars from 'react-stars'
 import './App.css';
 import {FaExternalLinkAlt} from 'react-icons/fa';
 import {asyncContainer,Typeahead} from 'react-bootstrap-typeahead'
+import BACKEND_HOST from '../constants.js'
 const AsyncTypeahead = asyncContainer(Typeahead)
 
-const backend_host = "8080";
 
 const useStyles = theme => ({
   root: {
@@ -78,7 +78,7 @@ class RecPage extends React.Component{
   handleSubmit(event){
     console.log(this.state.selected)
     this.setState({recLoading: true})
-    fetch('http://localhost:'+backend_host+'/books/similarbooks/${this.state.selected.book_id}')
+    fetch('http://localhost:'+BACKEND_HOST+'/books/similarbooks/${this.state.selected.book_id}')
         .then((response) => {
             response.json().then((data) => {
                 this.setState({tileData: data,recLoading: false})
@@ -142,7 +142,7 @@ class RecPage extends React.Component{
                 onInputChange={query=>{
                     if(query!="") {
                         this.setState({isLoading: true});
-                        fetch('http://localhost:'+backend_host+'/books/${query}')
+                        fetch('http://localhost:'+BACKEND_HOST+'/books/${query}')
                             .then((response) => {
                                 response.json().then((data) => {
                                     this.setState({loading: false})
