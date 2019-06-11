@@ -1,8 +1,13 @@
-.DS_Store
-/UI/node_modules
+/ui/node_modules
+*.DS_Store
 etl/merged_file.json
 etl/derby.log
 etl/spark-warehouse
 etl/booksWithTitle.json
 etl/metastore_db
-
+.idea/
+etl/booksWithTitle.csv
+etl/merged_file.csv
+__pycache__
+*.ipynb_checkpoints/
+venv/
