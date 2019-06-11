@@ -26,9 +26,12 @@ class MyTest(unittest.TestCase):
         etl = ea.ETL_Amazon()
         runs = etl.readJSON("test_file.json.gz")
         runs.createGlobalTempView("runs")
-        query_result = etl.sql_query(
+        query_result = etl.sqlQuery(
             "SELECT COUNT(*)"
             "FROM global_temp.runs"
         )
-        self.assertEqual(int(query_result), 263)
+        query_result_pd = query_result.toPandas()
+        self.assertEqual(int(query_result_pd.iloc[0]), 263)
+
+if __name__ == '__main__':
     unittest.main()

@@ -8,14 +8,22 @@ class ETL_Amazon():
         self.spark = SparkSession.builder.appName(
             "Python Spark SQL basic example").getOrCreate()
 
-    # read JSON function
-    # input: file location string
-    # return: spark object containing content of file
     def readJSON(self, file):
+        """
+        readJSON function
+        Input:
+            - file: location string of .gz file
+        Return:
+            - spark object containing content of file
+        """
         return self.spark.read.option('compression', 'gzip').json(file)
 
-    # sql_query function
-    # input: sql command
-    # return: spark object containing content of SQL command response
-    def sql_query(self, sql_cmd):
+    def sqlQuery(self, sql_cmd):
+        """
+        sqlQuery function
+        Input:
+            - sql_cmd: SQL query in string variable
+        Return:
+            - spark object containing content of SQL query
+        """
         return self.spark.sql(sql_cmd)
