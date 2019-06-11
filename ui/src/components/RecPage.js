@@ -78,7 +78,7 @@ class RecPage extends React.Component{
   handleSubmit(event){
     console.log(this.state.selected)
     this.setState({recLoading: true})
-    fetch(BACKEND_HOST+'/books/similarbooks/${this.state.selected.book_id}')
+    fetch(BACKEND_HOST+'/books/similarBooks/${this.state.selected.book_id}')
         .then((response) => {
             response.json().then((data) => {
                 this.setState({tileData: data,recLoading: false})
@@ -118,7 +118,7 @@ class RecPage extends React.Component{
   return (
     
     
-  <div className="App" style={{marginTop:'0',height:'100vh',verticalAlign:'middle',backgroundImage:'url(./images/IMG_1846.JPG)',backgroundSize:"cover",width:"100%",paddingLeft:"55vh"}}>
+  <div className="App" style={{marginTop:'0',height:'100vh',verticalAlign:'middle',backgroundImage:'url(./images/books.jpg)',backgroundSize:"cover",width:"100%",paddingLeft:"55vh"}}>
   
     <link rel="stylesheet" 
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
