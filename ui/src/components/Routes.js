@@ -3,8 +3,8 @@ import {Route} from 'react-router-dom'
 import WelcomePage from './WelcomePage'
 import RecPage from './RecPage'
 import VirtualLib from './VirtualLib'
-import RetUserDemo2 from './RetUserDemo2'
-import RetUserDemo1 from './RetUserDemo1'
+import RetUserDemo2 from './DemoUsers/RetUserDemo2'
+import RetUserDemo1 from './DemoUsers/RetUserDemo1'
 class Routes extends React.Component{
 render() {
     return (
