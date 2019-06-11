@@ -3,7 +3,7 @@ import numpy as np
 from recommendationengine.recommendation_engine import RecommendationEngine
 
 
-class MyTestCase(unittest.TestCase):
+class TestRecommendationEngine(unittest.TestCase):
 
     def setUp(self):
         RecommendationEngine.INPUT_FILE = 'https://tinyurl.com/yy4ekppg'
