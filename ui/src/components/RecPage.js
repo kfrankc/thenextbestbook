@@ -101,7 +101,7 @@ class RecPage extends React.Component{
     else
     this.setState({text: tile.description})
     this.setState({title: "Title: "+tile.title})
-    this.setState({rating: "Average Rating: "+tile.average_rating + "/5.00"})
+    this.setState({rating: "Rating: "+tile.average_rating + "/5.00"})
     this.setState({author: "Author: "+tile.name})
     this.setState({link:tile.url})
     this.setState({seen:"block"})
@@ -240,7 +240,7 @@ class RecPage extends React.Component{
               </div>
           </div>
           
-          <div style={{maxHeight:"27vh",textAlign:"center",fontSize:"15pt",marginBottom:"20%",overflowY:"auto"}}>
+          <div style={{maxHeight:"27vh",textAlign:"center",fontSize:"15pt",marginBottom:"20%",fontWeight:'600',overflowY:"auto"}}>
           <div style={{display:this.state.seentext,fontSize:"20pt",paddingTop:"15%",fontWeight:"bold"}}>
           Scroll over the bookshelf to see more books <br /> Click on a book to explore
 
