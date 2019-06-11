@@ -11,7 +11,8 @@ class ETLAmazon:
 
     def read_json(self, file):
         """
-        reads from compressed json file
+        Reads from compressed json file
+
         :param file: location string of .json.gz file
         :return: spark object containing content of file
         """
@@ -19,7 +20,8 @@ class ETLAmazon:
 
     def sql_query(self, sql_cmd):
         """
-        runs a sql query on the spark dataframe
+        Runs a sql query on the spark dataframe
+
         :param sql_cmd: SQL query in string variable
         :return: spark object containing content of SQL query
         """
@@ -27,7 +29,8 @@ class ETLAmazon:
 
     def get_title_on_asin(self):
         """
-        runs the join query on metadata and reviews dataset
+        Runs the join query on metadata and reviews dataset
+        
         :return: joined spark rdd
         """
         # query that joins books and its metadata by asin code

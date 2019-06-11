@@ -16,7 +16,7 @@ from app.models.books import BooksCollection
 
 def test_regex_search():
     """
-    tests regex search on books collection
+    Tests regex search on books collection
     """
     # Inserting documents to the mock collection
     collection = mongomock.MongoClient().db.collection
@@ -33,7 +33,7 @@ def test_regex_search():
 
 def test_similar_books():
     """
-    test fetch similar_books for the given book_id
+    Test fetch similar_books for the given book_id
     """
     # Inserting documents to the mock collection
     collection = mongomock.MongoClient().db.collection
@@ -51,7 +51,7 @@ def test_similar_books():
 
 def test_get_books_details_by_id():
     """
-    test get all book details for given book id's
+    Test get all book details for given book id's
     """
     # Inserting documents to the mock collection
     collection = mongomock.MongoClient().db.collection

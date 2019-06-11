@@ -10,6 +10,7 @@ def get_db():
     """
     Opens a new database connection if there is none yet for the
     current application context.
+
     :return: mongodb object
     """
 
@@ -22,6 +23,7 @@ def get_db():
 def create_app():
     """
     Creates the application object and registers the book controller with the app
+
     :return: Flask app object
     """
     # Creates flask object with directory for to serve static files

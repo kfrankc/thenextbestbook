@@ -1,6 +1,4 @@
-"""
-    config.py - Store's application level flask configs
-"""
+""" config.py - Store's application level flask configs """
 # Application port number
 PORT = 8080
 
