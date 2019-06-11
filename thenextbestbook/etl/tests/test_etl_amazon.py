@@ -12,7 +12,7 @@ class MyTest(unittest.TestCase):
         etl = ea.ETL_Amazon()
         test_file = etl.readJSON("thenextbestbook/etl/tests/test_file.json.gz")
         test_file_pd = test_file.toPandas()
-        test_file_truth = pd.read_json("etl/tests/test_file.json")
+        test_file_truth = pd.read_json("thenextbestbook/etl/tests/test_file.json")
         self.assertEqual(test_file_pd.shape[0], test_file_truth.shape[0])
 
     def test_read_col(self):
