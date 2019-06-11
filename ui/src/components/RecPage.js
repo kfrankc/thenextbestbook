@@ -96,7 +96,12 @@ class RecPage extends React.Component{
     for ( var i=0, len=options.length; i < len; i++ )
       obj[options[i]['title']] = options[i];
     console.log(obj)
-    return obj
+
+    options = new Array();
+    for ( var key in obj )
+      options.push(obj[key]);
+    
+      return options
   }
   handleMouseEnter(e){
     e.target.style.opacity = "1"
