@@ -1,4 +1,4 @@
-""" constants.py - stores values for source and destination files"""
+""" constants.py - stores values for source and destination files """
 
 
 AMAZON_BOOKS_JSON = "data/book_reviews.json.gz"
