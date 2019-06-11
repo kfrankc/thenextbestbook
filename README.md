@@ -15,3 +15,5 @@ This project aims to build a recommendation engine to help you find your next be
 Amazon Dataset: http://jmcauley.ucsd.edu/data/amazon/index.html
 
 Goodreads Dataset: https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/home
+
+### [Project Wiki](https://github.com/kfrankc/thenextbestbook/wiki)
