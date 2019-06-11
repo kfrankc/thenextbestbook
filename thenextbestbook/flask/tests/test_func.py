@@ -12,7 +12,9 @@ import app.controllers.utils as utils
 
 
 def test_return_title_with_author():
-    """ tests the utility function that joins the title and author name """
+    """
+    Tests the utility function that joins the title and author name
+    """
 
     books = [{"title": "ABC", "name": "XYZ"}]
     books_with_regex = [{"title": "123", "name": "000"}]

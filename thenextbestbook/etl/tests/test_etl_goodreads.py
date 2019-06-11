@@ -12,7 +12,7 @@ class MyTest(unittest.TestCase):
 
     def test_join_books_with_authors(self):
         """
-        runs join books with authors on test data with one book and author record
+        Runs join books with authors on test data with one book and author record
         """
         etl = eg.ETLGoodreads()
         books = etl.read_json("thenextbestbook/etl/tests/data/test_goodreads_books.json")

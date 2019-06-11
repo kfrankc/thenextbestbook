@@ -13,6 +13,7 @@ mod = Blueprint('books', __name__)
 def get_book_titles(book_name):
     """
     API to fetch book titles from search query
+
     :param book_name: type (string)
     :return: array of book titles
     """
@@ -37,6 +38,7 @@ def get_book_titles(book_name):
 def get_book_recommendations(book_id):
     """
     API to fetch similar books based on input book_id
+
     :param book_id: type (string)
     :return: array of similar books
     """

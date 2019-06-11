@@ -3,10 +3,11 @@
 
 def return_title_with_author(books, books_with_regex):
     """
+    Adds title_author key to the dict object by combining title and author
 
-    :param books:
-    :param books_with_regex:
-    :return:
+    :param books: array of books
+    :param books_with_regex: array of books
+    :return: books with new key 'title_author'
     """
     search_results = []
 

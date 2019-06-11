@@ -31,6 +31,8 @@ def test_config():
 
 @pytest.mark.usefixtures('client_class')
 def test_hello(client):
-    """ dummy API """
+    """
+    Dummy API
+    """
     response = client.get('/hello')
     assert response.data == b'Hello World!'

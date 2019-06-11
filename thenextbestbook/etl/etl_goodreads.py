@@ -11,7 +11,8 @@ class ETLGoodreads():
 
     def read_json(self, file):
         """
-        reads json from a file
+        Reads json from a file
+
         :param file: location string of .json file
         :return: spark object containing content of file
         """
@@ -19,7 +20,8 @@ class ETLGoodreads():
 
     def sql_query(self, sql_cmd):
         """
-        runs a sql query on the spark dataframe
+        Runs a sql query on the spark dataframe
+        
         :param sql_cmd: SQL query in string variable
         :return: spark object containing content of SQL query
         """
