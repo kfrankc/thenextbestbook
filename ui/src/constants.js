@@ -1,1 +1,1 @@
-const BACKEND_HOST = "8080"
+const BACKEND_HOST = "http://localhost:8080"

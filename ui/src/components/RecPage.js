@@ -78,7 +78,7 @@ class RecPage extends React.Component{
   handleSubmit(event){
     console.log(this.state.selected)
     this.setState({recLoading: true})
-    fetch('http://localhost:'+BACKEND_HOST+'/books/similarbooks/${this.state.selected.book_id}')
+    fetch(BACKEND_HOST+'/books/similarbooks/${this.state.selected.book_id}')
         .then((response) => {
             response.json().then((data) => {
                 this.setState({tileData: data,recLoading: false})
@@ -142,7 +142,7 @@ class RecPage extends React.Component{
                 onInputChange={query=>{
                     if(query!="") {
                         this.setState({isLoading: true});
-                        fetch('http://localhost:'+BACKEND_HOST+'/books/${query}')
+                        fetch(BACKEND_HOST+'/books/${query}')
                             .then((response) => {
                                 response.json().then((data) => {
                                     this.setState({loading: false})
