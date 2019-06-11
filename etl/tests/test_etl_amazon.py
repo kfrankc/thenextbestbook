@@ -33,4 +33,5 @@ class MyTest(unittest.TestCase):
         query_result_pd = query_result.toPandas()
         self.assertEqual(int(query_result_pd.iloc[0]), 263)
 
-unittest.main()
+if __name__ == '__main__':
+    unittest.main()
