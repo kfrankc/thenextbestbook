@@ -117,13 +117,13 @@ class RecPage extends React.Component{
   return (
     
     
-  <div className="App" style={{marginTop:'0',height:'100vh',verticalAlign:'middle',backgroundImage:'url(images/IMG_1846.JPG)',backgroundSize:"cover",width:"100%",paddingLeft:"55vh"}}>
+  <div className="App" style={{marginTop:'0',height:'100vh',verticalAlign:'middle',backgroundImage:'url(./images/IMG_1846.JPG)',backgroundSize:"cover",width:"100%",paddingLeft:"55vh"}}>
   
     <link rel="stylesheet" 
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
     crossOrigin="anonymous"/>
-    <div align="center" style={{marginTop:"2%",position:"absolute",backgroundImage:"url(images/bookcover.png)",backgroundPosition:"center",backgroundRepeat:"no-repeat",width:"70vh",height:"90vh", backgroundSize:"100% 100%", }}>
+    <div align="center" style={{marginTop:"2%",position:"absolute",backgroundImage:"url(./images/bookcover.png)",backgroundPosition:"center",backgroundRepeat:"no-repeat",width:"70vh",height:"90vh", backgroundSize:"100% 100%", }}>
     <Form>
       <div style={{paddingTop:'30%',paddingBottom:"25%",width:"75%"}}>
         <Form.Group controlId="formBasicBook">
@@ -177,13 +177,13 @@ class RecPage extends React.Component{
           show={this.state.show}
           onHide={this.handleClose}
           dialogClassName="modal-90w"
-          style={{width:"100%",height:"40vh",backgroundImage:"url(images/shelf.jpg)",backgroundRepeat:"no-repeat",backgroundSize:"100% 100%",overflowY:"hidden"}}
+          style={{width:"100%",height:"40vh",backgroundImage:"url(./images/shelf.jpg)",backgroundRepeat:"no-repeat",backgroundSize:"100% 100%",overflowY:"hidden"}}
         >
           <Modal.Body style={{position:"absolute",maxHeight:"40vh",overflowY:"auto",marginTop:"2%"}}>
             
-          <GridList className={classes.gridList} cols={2.5} style={{marginLeft:"2%",marginBottom:"2%"}}>
+          <GridList className={classes.gridList} cols={2.5} style={{marginLeft:"4%",marginBottom:"2%"}}>
         {this.state.tileData.map(tile => (
-          <GridListTile style={{width:"200px",height:"250px",marginRight:"5%",marginBottom:"4%"}}
+          <GridListTile style={{width:"20vh",height:"27vh",marginRight:"5%",marginBottom:"4%"}}
                         className={classes.gridTile}
                         key={tile.img}>
             <div className="image-container"
@@ -193,7 +193,7 @@ class RecPage extends React.Component{
 
                  onMouseUp={() => this.handleMouseClick(tile)}
                  onMouseLeave={this.handleMouseLeave}
-                 src={tile.image_url} style={{width:"200px",height:"250px",float:"left",opacity:'0.85'}} alt={tile.title} />
+                 src={tile.image_url} style={{width:"20vh",height:"27vh",float:"left",opacity:'0.85'}} alt={tile.title} />
                  <GridListTileBar
                             classes={{
                                 marginLeft: 5,
@@ -221,7 +221,7 @@ class RecPage extends React.Component{
           onHide={this.handleClose}
           dialogClassName="modal-next"
           style={{marginTop:"40vh",width:"100%",left:"10px !important"}} >
-          <Modal.Body style={{height:"55vh",width:"97vh",backgroundSize:"cover",backgroundRepeat:"no-repeat",backgroundImage:"url(images/card.jpg)",overflowY:"hidden"}}>
+          <Modal.Body style={{height:"55vh",width:"97vh",backgroundSize:"cover",backgroundRepeat:"no-repeat",backgroundImage:"url(./images/card.jpg)",overflowY:"hidden"}}>
           <div style={{marginRight:"8%",marginLeft:"8%"}}>
           <div>
           <div style={{fontSize:"20pt",marginTop:"8%",fontWeight:"bold",textAlign:"center"}}>

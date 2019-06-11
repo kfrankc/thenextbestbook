@@ -91,19 +91,19 @@ class VirtualLib extends React.Component{
   return (
     
 
-  <div className="App" style={{marginTop:'0',height:'100vh',verticalAlign:'middle',backgroundImage:'url(images/booktop.jpg)',backgroundSize:"100% 100%",width:"100%"}}>
+  <div className="App" style={{marginTop:'0',height:'100vh',verticalAlign:'middle',backgroundImage:'url(./images/booktop.jpg)',backgroundSize:"100% 100%",width:"100%"}}>
   
     <link rel="stylesheet" 
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
     crossorigin="anonymous"/>
      <div class='circle-container' style={{marginTop:"5vh",position:"absolute",marginLeft:"50vh"}} >
-    	<a href='#' class='deg0'><div class="zoom"><img class="imgs" src='images/scifi.jpg'/></div></a>
-    	<a href='#' class='deg45'><div class="zoom"><img class="imgs" src='images/romance.jpg'/></div></a>
-    	<a href='#' class='deg135'><div class="zoom"><img class="imgs" src='images/mystery.jpg'/></div></a>
-    	<a href='#' class='deg180'><div class="zoom"><img class="imgs" src='images/fiction.jpg'/></div></a>
-    	<a href='#' class='deg225'><div class="zoom"><img class="imgs" src='images/fantasy.jpeg'/></div></a>
-    	<a href='#' class='deg315'><div class="zoom"><img class="imgs" src='images/bio.jpg'/></div></a>
+    	<a href='#' class='deg0'><div class="zoom"><img class="imgs" src='./images/scifi.jpg'/></div></a>
+    	<a href='#' class='deg45'><div class="zoom"><img class="imgs" src='./images/romance.jpg'/></div></a>
+    	<a href='#' class='deg135'><div class="zoom"><img class="imgs" src='./images/mystery.jpg'/></div></a>
+    	<a href='#' class='deg180'><div class="zoom"><img class="imgs" src='./images/fiction.jpg'/></div></a>
+    	<a href='#' class='deg225'><div class="zoom"><img class="imgs" src='./images/fantasy.jpeg'/></div></a>
+    	<a href='#' class='deg315'><div class="zoom"><img class="imgs" src='./images/bio.jpg'/></div></a>
     </div>
     
     </div>);}
