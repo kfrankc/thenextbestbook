@@ -30,7 +30,7 @@ const useStyles = theme => ({
 
 
 
-class AppThree extends React.Component{
+class RetUserDemo2 extends React.Component{
   
   constructor(props, context) {
     super(props, context);
@@ -438,4 +438,4 @@ class AppThree extends React.Component{
     </div>);}
 }
 
-export default AppThree;
+export default RetUserDemo2;

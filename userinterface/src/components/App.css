@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+  width: 100vh;
+  height: 100vh;
+ 
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.modal-90w {
+  
+  max-width: 150vh !important;
+}
+
+.modal-next {
+  max-width: 97vh !important;
+}
+
+.circle-container {
+  position: relative;
+  width: 40em;
+  height: 40em;
+  padding: 8em;
+    /*2.8em = 5em*2.24 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+  border: dashed 1px;
+  border-radius: 50%;
+  margin: 1.75em auto 0;
+}
+.circle-container a {
+  display: block;
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 8em; height: 8em;
+  margin: -2em;
+}
+.circle-container img { display: block; width: 100%; }
+.deg0 { transform: translate(20em); } /* 12em = half the width of the wrapper */
+.deg45 { transform: rotate(45deg) translate(20em) rotate(-45deg); }
+.deg90 { transform: rotate(90deg) translate(20em) rotate(-90deg); }
+.deg135 { transform: rotate(135deg) translate(20em) rotate(-135deg); }
+.deg180 { transform: translate(-20em); }
+.deg225 { transform: rotate(225deg) translate(20em) rotate(-225deg); }
+.deg270 { transform: rotate(270deg) translate(20em) rotate(-270deg); }
+.deg315 { transform: rotate(315deg) translate(20em) rotate(-315deg); }
+
+
+.imgs{
+  
+  -webkit-animation: bummer 2s;
+    animation: bummer 2s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
+    
+}
+
+
+
+.zoom{
+  transition: transform 0.2s;
+}
+.zoom:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+@-webkit-keyframes bummer {
+  100% {
+      -webkit-transform: scale(1,1); 
+  }
+}
+
+@keyframes bummer {
+  100% {
+      transform: scale(1,1); 
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
