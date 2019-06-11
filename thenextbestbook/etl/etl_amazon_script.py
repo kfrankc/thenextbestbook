@@ -1,26 +1,22 @@
+""" script to run ETL on Amazon data """
 import etl_amazon as ea
 import constants as ct
 
 # Initiate Spark Session
-# conf = SparkConf().setMaster("local").setAppName("temp")
-etl = ea.ETL_Amazon()
+etl = ea.ETLAmazon()
 
 # Create variable 'book' to store book review JSON object
-books = etl.readJSON(ct.BOOKS_JSON)
+books = etl.read_json(ct.AMAZON_BOOKS_JSON)
 
 # Create variable 'metadata' to store metadata JSON object
-metadata = etl.readJSON(ct.METATA_JSON)
+metadata = etl.read_json(ct.AMAZON_METADATA_JSON)
 
 # Create global variables for spark SQL command
 books.createGlobalTempView("books")
 metadata.createGlobalTempView("metadata")
 
-# Create variable 'booksWithTitle' to store result of SQL
-# query that joins books and its metadata by asin code
-booksWithTitle = etl.sqlQuery(
-    "SELECT b.asin, b.overall, m.title"
-    "FROM global_temp.books b, global_temp.metadata m"
-    "WHERE b.asin = m.asin")
+# Create variable 'books_with_title' to store result of SQL
+books_with_title = etl.get_title_on_asin()
 
 # Save result to JSON folder
-booksWithTitle.write.format('json').save("./booksWithTitleJSON")
+books_with_title.write.format('json').save(ct.AMAZON_REVIEWS_DESTINATION)
