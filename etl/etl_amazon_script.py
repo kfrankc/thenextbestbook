@@ -1,14 +1,15 @@
 import etl_amazon as ea
+import constants as ct
 
 # Initiate Spark Session
 # conf = SparkConf().setMaster("local").setAppName("temp")
 etl = ea.ETL_Amazon()
 
 # Create variable 'book' to store book review JSON object
-books = etl.readJSON("/Users/frankchen/Desktop/reviews_Books_5.json.gz")
+books = etl.readJSON(ct.BOOKS_JSON)
 
 # Create variable 'metadata' to store metadata JSON object
-metadata = etl.readJSON("/Users/frankchen/Desktop/metadata.json.gz")
+metadata = etl.readJSON(ct.METATA_JSON)
 
 # Create global variables for spark SQL command
 books.createGlobalTempView("books")
