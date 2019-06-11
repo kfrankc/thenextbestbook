@@ -42,6 +42,7 @@ class RecPage extends React.Component{
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleMouseClick = this.handleMouseClick.bind(this);
+    this.removeDuplicates = this.removeDuplicates.bind(this);
 
     this.state = {
       selected: {},
@@ -89,7 +90,14 @@ class RecPage extends React.Component{
     console.log("submitted")
   }
 
-
+  removeDuplicates(options){
+    var obj = {};
+    console.log(options)
+    for ( var i=0, len=options.length; i < len; i++ )
+      obj[options[i]['title']] = options[i];
+    console.log(obj)
+    return obj
+  }
   handleMouseEnter(e){
     e.target.style.opacity = "1"
 }
@@ -148,7 +156,10 @@ class RecPage extends React.Component{
                                     this.setState({loading: false})
                                     console.log(data)
                                     if(data.length!=0)
-                                    this.setState({options: data})
+                                    {
+                                      data = this.removeDuplicates(data)
+                                      this.setState({options: data})
+                                    }
                                 })
                             });
                     }else {this.setState({options:[],loading: false})}
