@@ -1,3 +1,4 @@
+""" script to run ETL on Amazon data """
 import etl_amazon as ea
 import constants as ct
 
@@ -14,9 +15,8 @@ metadata = etl.read_json(ct.AMAZON_METADATA_JSON)
 books.createGlobalTempView("books")
 metadata.createGlobalTempView("metadata")
 
-# Create variable 'booksWithTitle' to store result of SQL
-# query that joins books and its metadata by asin code
+# Create variable 'books_with_title' to store result of SQL
 books_with_title = etl.get_title_on_asin()
 
 # Save result to JSON folder
-books_with_title.write.format('json').save("./data/booksWithTitleJSON")
+books_with_title.write.format('json').save(ct.AMAZON_REVIEWS_DESTINATION)

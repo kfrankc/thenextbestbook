@@ -1,3 +1,4 @@
+""" script to run transformations on goodreads data"""
 import etl_goodreads as eg
 import constants as ct
 
@@ -15,7 +16,6 @@ books.createGlobalTempView("books")
 authors.createGlobalTempView("authors")
 
 # Create variable 'books_with_authors' to store result of SQL
-# query that joins books and authors by author_id
 books_with_authors = etl.join_books_with_authors()
 
 # Save result to JSON folder

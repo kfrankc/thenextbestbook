@@ -11,27 +11,23 @@ class ETLGoodreads():
 
     def read_json(self, file):
         """
-        readJSON function
-        Input:
-            - file: location string of .json file
-        Return:
-            - spark object containing content of file
+        reads json from a file
+        :param file: location string of .json file
+        :return: spark object containing content of file
         """
         return self.spark.read.json(file)
 
     def sql_query(self, sql_cmd):
         """
-        sqlQuery function
-        Input:
-            - sql_cmd: SQL query in string variable
-        Return:
-            - spark object containing content of SQL query
+        runs a sql query on the spark dataframe
+        :param sql_cmd: SQL query in string variable
+        :return: spark object containing content of SQL query
         """
         return self.spark.sql(sql_cmd)
 
     def join_books_with_authors(self):
         """
-        Runs the join query on books and authors dataset
+        runs the join query on books and authors dataset
         :return: joined spark rdd
         """
         return self.sql_query(
