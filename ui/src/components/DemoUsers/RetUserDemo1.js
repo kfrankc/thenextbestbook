@@ -304,7 +304,7 @@ class RetUserDemo1 extends React.Component{
     else
     this.setState({text: tile.description})
     this.setState({title: "Title: "+tile.title})
-    this.setState({rating: "Average Rating: "+tile.average_rating + "/5.00"})
+    this.setState({rating: "Rating: "+tile.average_rating + "/5.00"})
     this.setState({author: "Author: "+tile.name})
     this.setState({link:tile.url})
     this.setState({seen:"block"})
@@ -329,7 +329,7 @@ class RetUserDemo1 extends React.Component{
         <div style={{color:'white',fontSize:'18pt',fontFamily:"Luminari"}}>
            Rated Books <br />
         </div>
-        <div class={classes.root} style={{height:'20vh',overflowX:'auto'}}>
+        <div class={classes.root} style={{height:'27vh',overflowX:'auto'}}>
         <GridList className={classes.gridList} cols={2.5} style={{marginLeft:"2%",marginBottom:"2%"}}>
         {this.state.options.map(tile => (
           <GridListTile style={{width:"20vh",height:"27vh",marginRight:"5%",marginBottom:"4%"}}
@@ -402,7 +402,7 @@ class RetUserDemo1 extends React.Component{
           onHide={this.handleClose}
           dialogClassName="modal-next"
           style={{marginTop:'20vh',width:"100%",left:"10px !important"}} >
-          <Modal.Body style={{height:"55vh",width:"97vh",backgroundSize:"cover",backgroundRepeat:"no-repeat",backgroundImage:"url(card.jpg)",overflowY:"hidden"}}>
+          <Modal.Body style={{height:"55vh",width:"97vh",backgroundSize:"cover",backgroundRepeat:"no-repeat",backgroundImage:"url(./images/card.jpg)",overflowY:"hidden"}}>
           <div style={{marginRight:"8%",marginLeft:"8%"}}>
           <div>
           <div style={{fontSize:"20pt",marginTop:"8%",fontWeight:"bold",textAlign:"center"}}>
@@ -420,7 +420,7 @@ class RetUserDemo1 extends React.Component{
               </div>
           </div>
           
-          <div style={{maxHeight:"27vh",textAlign:"center",fontSize:"15pt",marginBottom:"20%",overflowY:"auto"}}>
+          <div style={{maxHeight:"27vh",textAlign:"center",fontWeight:'600',fontSize:"15pt",marginBottom:"20%",overflowY:"auto"}}>
           <div style={{display:this.state.seentext,fontSize:"20pt",paddingTop:"15%",fontWeight:"bold"}}>
           Scroll over the bookshelf to see more books <br /> Click on a book to explore
 
