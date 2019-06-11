@@ -3,7 +3,7 @@ import constants as ct
 
 # Initiate Spark Session
 # conf = SparkConf().setMaster("local").setAppName("temp")
-etl = ea.ETL_Amazon()
+etl = ea.ETLAmazon()
 
 # Create variable 'book' to store book review JSON object
 books = etl.readJSON(ct.BOOKS_JSON)

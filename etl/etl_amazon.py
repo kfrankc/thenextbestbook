@@ -2,8 +2,8 @@ from pyspark import SparkConf, SparkContext
 from pyspark.sql import SparkSession
 
 
-class ETL_Amazon():
-    # Initialize ETL_Amazon Object
+class ETLAmazon():
+    # Initialize ETLAmazon Object
     def __init__(self):
         self.spark = SparkSession.builder.appName(
             "Python Spark SQL basic example").getOrCreate()
