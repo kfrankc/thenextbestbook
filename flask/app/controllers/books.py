@@ -1,11 +1,11 @@
-""" Controller for books API"""
+""" Controller for books API """
 from flask import Blueprint
 from bson.json_util import dumps
 from app import get_db
 import app.controllers.utils as utils
-from app.controllers.models.books import  BooksCollection
+from app.models.books import BooksCollection
 
-# routes for books
+# register routes for books
 mod = Blueprint('books', __name__)
 
 

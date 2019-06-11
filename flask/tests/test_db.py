@@ -1,3 +1,4 @@
+""" test mongoDb queries """
 from bson.json_util import dumps
 import os
 import sys
@@ -9,7 +10,7 @@ sys.path.insert(
         os.path.join(
             os.path.dirname(__file__),
             '..')))
-from app.controllers.models.books import BooksCollection
+from app.models.books import BooksCollection
 
 
 def test_regex_search():
@@ -23,12 +24,12 @@ def test_regex_search():
     books_collection = BooksCollection(collection)
     result = books_collection.get_books_by_regex("title_1")
 
-    assert '[{"title": "title_1"}]' == dumps(result)
+    assert dumps(result) == '[{"title": "title_1"}]'
 
 
 def test_similar_books():
     """
-    fetch similar_books  for the given book_id
+    test fetch similar_books for the given book_id
     """
     # Inserting documents to the mock collection
     collection = mongomock.MongoClient().db.collection
@@ -41,12 +42,12 @@ def test_similar_books():
     books_collection = BooksCollection(collection)
     result = books_collection.get_similar_books_by_book_id("AB123LTPL")
 
-    assert '[{"similar_books": ["123", "456", "768"]}]' == dumps(result)
+    assert  dumps(result) == '[{"similar_books": ["123", "456", "768"]}]'
 
 
 def test_get_books_details_by_id():
     """
-    get all book details for
+    test get all book details for given book id's
     """
     collection = mongomock.MongoClient().db.collection
     objects = [{"book_id": "123", "title": "title_1"},
@@ -58,6 +59,6 @@ def test_get_books_details_by_id():
     books_collection = BooksCollection(collection)
     result = books_collection.get_books_details(["123", "456", "789"])
 
-    assert '[{"book_id": "123", "title": "title_1"}, {"book_id": "456", "title": "title_2"}, ' \
-           '{"book_id": "789", "title": "title_3"}]'\
-           == dumps(result)
+    assert dumps(result) == '[{"book_id": "123", "title": "title_1"}, ' \
+                            '{"book_id": "456", "title": "title_2"}, ' \
+                            '{"book_id": "789", "title": "title_3"}]'
