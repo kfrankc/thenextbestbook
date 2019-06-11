@@ -26,7 +26,7 @@ class MyTest(unittest.TestCase):
         etl = ea.ETL_Amazon()
         runs = etl.readJSON("etl/tests/test_file.json.gz")
         runs.createGlobalTempView("runs")
-        query_result = etl.sql_query(
+        query_result = etl.sqlQuery(
             "SELECT COUNT(*)"
             "FROM global_temp.runs"
         )

@@ -16,7 +16,7 @@ metadata.createGlobalTempView("metadata")
 
 # Create variable 'booksWithTitle' to store result of SQL
 # query that joins books and its metadata by asin code
-booksWithTitle = etl.sql_query(
+booksWithTitle = etl.sqlQuery(
     "SELECT b.asin, b.overall, m.title"
     "FROM global_temp.books b, global_temp.metadata m"
     "WHERE b.asin = m.asin")
