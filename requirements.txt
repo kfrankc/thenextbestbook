@@ -13,3 +13,4 @@ six==1.12.0
 flask==0.10.1
 pymongo==2.5
 mongokit==0.9.1.1
+scikit-surprise==1.0.6
