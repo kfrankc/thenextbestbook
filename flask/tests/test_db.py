@@ -59,7 +59,5 @@ def test_get_books_details_by_id():
     books_collection = BooksCollection(collection)
     result = books_collection.get_books_details(["123", "456", "789"])
     #print(dumps(result))
-    assert dumps(result) == '[{"title": "title_1", "book_id": "123"}, ' \
-                            '{"title": "title_2", "book_id": "456"}, ' \
-                            '{"title": "title_3", "book_id": "789"}]'
+    assert dumps(result) == '[{"book_id": "123", "title": "title_1"}, {"book_id": "456", "title": "title_2"}, {"book_id": "789", "title": "title_3"}]'
 
