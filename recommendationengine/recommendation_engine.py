@@ -1,6 +1,5 @@
 import pickle
 from collections import defaultdict
-
 import pandas as pd
 from surprise import Dataset
 from surprise import Reader
