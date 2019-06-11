@@ -1,8 +1,5 @@
 import unittest
-
-
 import numpy as np
-
 from recommendationengine.recommendation_engine import RecommendationEngine
 
 
