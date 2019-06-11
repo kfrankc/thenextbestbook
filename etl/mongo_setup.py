@@ -1,10 +1,10 @@
-import pymongo
-import subprocess
-import bson
+from pymongo import MongoClient
+from subprocess import call
+from bson import Code
 
 
 # Data transfer to cluster
-subprocess.call(".mongo_import.sh", shell = True)
+call(".mongo_import.sh", shell = True)
 
 
 # Connection String
@@ -14,21 +14,21 @@ db = client.reviews
 
 # Data type conversion/clean up
 collection = db["gr_books"]
-self.collection.find().forEach(bson.Code( '''function(x) 
+self.collection.find().forEach(Code( '''function(x) 
     {db.gr_books.update(
         {"_id":x._id}, 
         {"$set":{"ratings_count":parseInt(x.ratings_count)}}
     )
 }'''))
 
-self.collection.find().forEach(bson.Code( '''function(x) 
+self.collection.find().forEach(Code( '''function(x) 
     {db.gr_books.update(
         {"_id":x._id}, 
         {"$set":{"text_reviews_count":parseInt(x.ratings_count)}}
     )
 }'''))
 
-self.collection.find().forEach(bson.Code( '''function(x) 
+self.collection.find().forEach(Code( '''function(x) 
     {db.gr_books.update(
         {"_id":x._id}, 
         {"$set":{"average_rating":parseFloat(x.ratings_count)}}
@@ -52,7 +52,7 @@ collection.create_index("title")
 collection.create_index("book_id")
 
 # Final Dataset
-self.collection.find().forEach(bson.Code( '''
+self.collection.find().forEach(Code( '''
     (function(obj){ 
    db.gr_books.insert(obj)
 }'''))
