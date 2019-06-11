@@ -34,7 +34,7 @@ class MyTestCase(unittest.TestCase):
     def test_recommendations(self):
         self.recommendation_engine.train_svd()
         top_10 = self.recommendation_engine.get_top_n(10)
-        for k, v in top_10.iteritems():
+        for k, v in top_10.items():
             for book in v:
                 self.assertIsInstance(book[0], str)
                 self.assertIsInstance(book[1], float)
