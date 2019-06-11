@@ -33,7 +33,7 @@ def get_book_titles(book_name):
     return dumps(search_results)
 
 
-@mod.route('/books/similarbooks/<book_id>')
+@mod.route('/books/similarBooks/<book_id>')
 def get_book_recommendations(book_id):
     """
     API to fetch similar books based on input book_id
