@@ -1,4 +1,6 @@
 """ Books Collection class """
+
+
 class BooksCollection:
 
     def __init__(self, collection):
