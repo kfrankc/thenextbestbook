@@ -30,9 +30,6 @@ Werkzeug==0.14.1
 XlsxWriter==1.1.5
 absl-py==0.7.1
 alabaster==0.7.12
-anaconda-client==1.7.2
-anaconda-navigator==1.9.4
-anaconda-project==0.8.2
 appdirs==1.4.3
 appnope==0.1.0
 appscript==1.0.1
