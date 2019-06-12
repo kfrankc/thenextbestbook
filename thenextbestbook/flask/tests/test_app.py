@@ -1,5 +1,4 @@
 """ application test cases """
-
 import os
 import sys
 import pytest
