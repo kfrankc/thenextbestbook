@@ -1,4 +1,4 @@
-""" test mongoDb queries """
+""" Test mongoDb queries """
 from bson.json_util import dumps
 import os
 import sys
