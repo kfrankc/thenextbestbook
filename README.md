@@ -12,8 +12,13 @@ This project aims to build a recommendation engine to help you find your next be
 
 ## Links to the dataset
 
-Amazon Dataset: http://jmcauley.ucsd.edu/data/amazon/index.html
+Amazon Dataset: http://jmcauley.ucsd.edu/data/amazon/index.html <sup>[1]</sup>
 
 Goodreads Dataset: https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/home
 
 ### [Project Wiki](https://github.com/kfrankc/thenextbestbook/wiki)
+
+### References
+[1]
+R. He, J. McAuley. Modeling the visual evolution of fashion trends with one-class collaborative filtering. WWW, 2016 
+J. McAuley, C. Targett, J. Shi, A. van den Hengel. Image-based recommendations on styles and substitutes. SIGIR, 2015
