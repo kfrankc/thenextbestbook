@@ -1,4 +1,6 @@
 """ Utility functions """
+
+
 def return_title_with_author(books, books_with_regex):
     """
     Adds title_author key to the dict object by combining title and author
