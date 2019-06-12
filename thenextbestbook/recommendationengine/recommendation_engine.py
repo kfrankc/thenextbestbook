@@ -17,7 +17,7 @@ class RecommendationEngine:
 
     """
 
-    INPUT_FILE = 'output2.csv'
+    INPUT_FILE = 'https://tinyurl.com/y5c72dke/output2.csv'
     COLUMN_NAMES = ['book_id', 'user_id', 'rating']
     ORDERED_COLUMNS = ['user_id', 'book_id', 'rating']
     RATING_SCALE = (1, 5)

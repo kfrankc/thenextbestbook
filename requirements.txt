@@ -30,9 +30,6 @@ Werkzeug==0.14.1
 XlsxWriter==1.1.5
 absl-py==0.7.1
 alabaster==0.7.12
-anaconda-client==1.7.2
-anaconda-navigator==1.9.4
-anaconda-project==0.8.2
 appdirs==1.4.3
 appnope==0.1.0
 appscript==1.0.1
@@ -48,7 +45,7 @@ backports.shutil-get-terminal-size==1.0.0
 beautifulsoup4==4.7.1
 bitarray==0.8.3
 bkcharts==0.2
-blaze==0.11.3
+blaze==0.10.1
 bleach==3.1.0
 bokeh==1.0.4
 boto==2.49.0
