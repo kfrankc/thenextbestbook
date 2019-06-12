@@ -17,6 +17,10 @@ Exposes the model and the books database in the form of RESTful API's for intera
 - Application Front-end
 A User Interface for the users to interact with the recommendation engine. The UI receives inputs from the user in the form of clicks and form data, and outputs the suitable results fetched from the application back-end. 
 
+## Software Architecture
+
+![](https://raw.githubusercontent.com/kfrankc/thenextbestbook/master/docs/system_architecture.png)
+
 ## Interactions to accomplish use cases
 
 1) Use Case:
