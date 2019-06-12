@@ -1,5 +1,4 @@
 """ Test cases for ETLAmazon class """
-
 import os
 import sys
 import unittest

@@ -1,5 +1,4 @@
 """ Test cases for ETLGoodreads class """
-
 import os
 import sys
 import unittest
