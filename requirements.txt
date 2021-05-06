@@ -16,5 +16,5 @@ mongokit==0.9.1.1
 scikit-surprise==1.0.6
 pyspark==2.4.3
 mongomock==3.16.0
-Flask-Cors==3.0.7
+Flask-Cors==3.0.9
 pytest-flask==0.15.0
